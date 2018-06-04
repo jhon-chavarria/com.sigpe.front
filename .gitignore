@@ -1,48 +1,48 @@
-# Compiled Object files, Static and Dynamic libs (Shared Objects)
-*.o
-*.a
-*.so
+# Cache and logs (Symfony2)
+/app/cache/*
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
 
-# Folders
-_obj
-_test
+# Email spool folder
+/app/spool/*
 
-# Architecture specific extensions/prefixes
-*.[568vq]
-[568vq].out
+# Cache, session files and logs (Symfony3)
+/var/cache/*
+/var/logs/*
+/var/sessions/*
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+!var/sessions/.gitkeep
 
-*.cgo1.go
-*.cgo2.c
-_cgo_defun.c
-_cgo_gotypes.go
-_cgo_export.*
+# Parameters
+/app/config/parameters.yml
+/app/config/parameters.ini
 
-_testmain.go
+# Managed by Composer
+/app/bootstrap.php.cache
+/var/bootstrap.php.cache
+/bin/*
+!bin/console
+!bin/symfony_requirements
+/vendor/
 
-*.exe
-*.test
-*.prof
+# Assets and user uploads
+/web/bundles/
+/web/uploads/
 
-# WebStorm
-*.iml
+# PHPUnit
+/app/phpunit.xml
+/phpunit.xml
 
-# Directory-based project format:
-.idea/
-.idea/workspace.xml
-**/.idea/workspace.xml
+# Build data
+/build/
 
-# mac hidden files
-.DS_Store
+# Composer PHAR
+/composer.phar
 
-##other
-#node_modules/
-#bower_components/
-.tmp
-#.sass-cache
-#builds/**/images/*
-#*.ogg
-#*.mp3
-#*.mp4
-#*.png
-#*.jpeg
-*.psd
+# Backup entities generated with doctrine:generate:entities command
+**/Entity/*~
+
+# Embedded web-server pid file
+/.web-server-pid
