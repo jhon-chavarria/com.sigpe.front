@@ -15,6 +15,6 @@ class DefaultController extends Controller {
 
         return $this->render(
             'base.html.twig', array('title'=>'Jonathan Chavarria')
-        );  
+        );
     }
 }
